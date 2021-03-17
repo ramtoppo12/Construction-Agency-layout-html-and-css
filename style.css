@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --btn-color: #5b9bd0;
+  --burger-color: #4683b4;
+  --sec-color: #1b206e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  color: #111;
+}
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+p {
+  margin: 20px 0 10px;
+  font-size: 1.1rem;
+}
+.no-js #loader {
+  display: none;
+}
+.js #loader {
+  display: block;
+  position: absolute;
+  left: 100px;
+  top: 0;
+}
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(images/loader-128x/Preloader_4.gif) center no-repeat #fff;
+}
+.contact__loader {
+  background: url(images/loader-128x/Preloader_3.gif) center no-repeat #fff;
+}
+.work__loader {
+  background: url(images/loader-128x/Preloader_2.gif) center no-repeat #fff;
+}
+.services__loader {
+  background: url(images/loader-128x/Preloader_7.gif) center no-repeat #fff;
+}
+.button {
+  display: inline-block;
+  background-color: var(--btn-color);
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 30px;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: transform 1s ease;
+  border-radius: 5px;
+  border: 0;
+}
+.button:hover {
+  transform: scale(0.98);
+}
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  padding: 100px;
+}
+section.home {
+  flex-direction: row;
+  margin-top: 0;
+}
+
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+  font-size: 2rem;
+  font-weight: 700;
+  z-index: 25;
+}
+.toggle {
+  position: fixed;
+  border-radius: 2px;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fb%2Fb2%2FHamburger_icon.svg%2F1200px-Hamburger_icon.svg.png&f=1&nofb=1);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 20;
+  transition: background 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.toggle.active {
+  background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.iconfinder.com%2Fdata%2Ficons%2Fstatus%2F100%2Fclose_1-512.png&f=1&nofb=1);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  outline: none;
+}
+.home__content {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+}
+.home__image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: all 1.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  height: 110%;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.navigation.active {
+  left: 0;
+}
+.navigation ul {
+  position: relative;
+}
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+}
+.navigation ul li a {
+  font-size: 2.2rem;
+  color: #111;
+  text-decoration: none;
+  font-weight: 300;
+}
+.navigation ul li a:hover {
+  color: var(--btn-color);
+}
+.navigation > .social__dashbord {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation > .social__dashbord a {
+  display: inline-block;
+  transform: scale(1.2);
+  color: #111;
+}
+.navigation .email__icon {
+  position: absolute;
+  bottom: 20px;
+  transform: scale(0.5);
+}
+
+/* servcies */
+.services {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+.services .service {
+  padding: 30px;
+}
+.services .service:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.services .service h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #1e2691;
+}
+.services .service .icon img {
+  max-width: 100%;
+  min-height: 34vh;
+}
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+.portfolio .item {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+}
+.portfolio .item img {
+  width: 100%;
+  height: 100%;
+}
+.action {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  opacity: 0;
+}
+.portfolio .item:hover > .action {
+  opacity: 1;
+  cursor: pointer;
+}
+.action a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 5px 15px;
+}
+.contact {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.contact__form {
+  position: relative;
+  background: #f9f9f9;
+  width: calc(100%-400px);
+  padding: 60px 40px 20px;
+}
+.contact__form > form {
+  width: 100%;
+}
+.contact__form .row {
+  width: 100%;
+  display: flex;
+}
+.contact__form .input50 {
+  width: 50%;
+  margin: 0 10px;
+}
+.contact__form .input100 {
+  width: 100%;
+  margin: 0 10px;
+}
+.contact__form .row input,
+.contact__form .row textarea {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  color: #111;
+  background: transparent;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 0;
+  resize: none;
+  padding: 10px;
+}
+.contact__form .row textarea {
+  height: 150px;
+}
+.contact__form .row input[type="submit"] {
+  background: var(--sec-color);
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+}
+.contact__info {
+  width: 350px;
+  background: #f9f9f9;
+  padding: 60px 40px 20px;
+}
+.contact__info .info__box {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.contact__info .info__box .contact__icon {
+  width: 20px;
+  margin-right: 40px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.contact__info .info__box .details h4 {
+  color: var(--sec-color);
+}
+.contact__info .info__box .details a {
+  color: #111;
+}
+@media (max-width: 1068px) {
+  .home__image {
+    display: none;
+  }
+  .logo {
+    top: 10px;
+    left: 40px;
+    font-size: 1.4rem;
+  }
+  section {
+    margin: 30px 0;
+    padding: 100px 40px;
+  }
+  .toggle {
+    width: 45px;
+    height: 45px;
+    right: 5px;
+    top: 5px;
+  }
+  .navigation ul li a {
+    font-size: 1.2rem;
+  }
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact {
+    flex-direction: column;
+  }
+  .contact__form {
+    width: 100%;
+    padding: 30px 30px 20px;
+  }
+  .contact__form .row {
+    flex-direction: column;
+  }
+  .contact__form .input50,
+  .contact__form .input100 {
+    width: 100%;
+    margin: 0;
+  }
+  .contact__info {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .services .service {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  .home__content {
+    margin: 100px 0 0 0;
+  }
+}
